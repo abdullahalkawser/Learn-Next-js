@@ -13,7 +13,11 @@ const Navber = () => {
         <Link href='/uploads'>upload Photo</Link>
 
         {status === 'loading' && <div> loading...</div> }
-        {status === 'authenticated' && <div> {sesion.user!.name}</div> }
+        {status === 'authenticated' && <div> {sesion.user!.name} <br />
+          <Link href='/api/auth/signout'>Sign Out</Link>
+
+
+        </div> }
         {status === 'unauthenticated' &&  <Link href='/api/auth/signin'>Login</Link> }
        
     </div>
