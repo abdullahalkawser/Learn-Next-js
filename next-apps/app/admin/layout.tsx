@@ -1,0 +1,17 @@
+import React, { ReactNode } from 'react'
+
+interface Props{
+    children:ReactNode
+}
+
+const layout = ({children}: Props) => {
+  return (
+    <div className='flex'>
+        <aside className='bg-slate-700 p-5'>admin side ber</aside>
+        
+        <div>{children}</div>
+    </div>
+  )
+}
+
+export default layout
